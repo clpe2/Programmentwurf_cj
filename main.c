@@ -4,5 +4,5 @@
 #include "developer.c"
 
 int main(){
-    
+    printf("wdwa")
 }
