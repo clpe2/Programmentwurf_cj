@@ -76,7 +76,7 @@ int main() {
         printf("4. Beenden\n");
         scanf("%d", &choice);
 
-        switch (choice) {
+        switch (choice) {   
             case 1:
                 for (int i = 0; i < group.num_developers; i++) {
                     print_developer(&group.developers[i]);

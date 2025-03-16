@@ -9,7 +9,7 @@
 
 typedef struct {
     Developer developers[MAX_DEVELOPERS];
-    char logo[LOGO_HEIGHT][LOGO_WIDTH + 1]; // +1 für Nullterminierung
+    char logo[LOGO_HEIGHT][LOGO_WIDTH + 1]; // +1 für null termination
     int num_developers;
 } DeveloperGroup;
 
