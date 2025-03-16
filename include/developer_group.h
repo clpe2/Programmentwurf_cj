@@ -4,8 +4,8 @@
 #include "developer.h"
 
 #define MAX_DEVELOPERS 2
-#define LOGO_WIDTH 40
-#define LOGO_HEIGHT 20
+#define LOGO_WIDTH 161
+#define LOGO_HEIGHT 100
 
 typedef struct {
     Developer developers[MAX_DEVELOPERS];
