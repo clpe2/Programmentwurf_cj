@@ -15,7 +15,7 @@ void add_developer(DeveloperGroup *group, Developer developer) {
     if (group->num_developers < MAX_DEVELOPERS) {
         group->developers[group->num_developers++] = developer;
     } else {
-        printf("More devs than allowed"\n);
+        printf("More devs than allowed\n");
     }
 }
 

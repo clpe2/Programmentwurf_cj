@@ -1,0 +1,2 @@
+/usr/bin/ar qc libProgramm_lib.a  CMakeFiles/Programm_lib.dir/src/developer.c.o CMakeFiles/Programm_lib.dir/src/developer_group.c.o
+/usr/bin/ranlib libProgramm_lib.a
