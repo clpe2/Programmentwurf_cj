@@ -62,12 +62,12 @@ int main() {
     "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%%              %%%%%%%%%%%%%%%%%%%%%%%%%              %%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
     "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%%%%/                                     (%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
     "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%%%%%%%%%%%%%(/*/(%%%%%%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
-    };
+    }; //group logo added to the 2 x 2 array
     DeveloperGroup group = create_developer_group(logo);
-    add_developer(&group, create_developer("Johannes X", "Kr"));
-    add_developer(&group, create_developer("Clarence Pereira", "Clpe2"));
+    add_developer(&group, create_developer("Johannes X", "Kr")); //developer 1 created and added to the group
+    add_developer(&group, create_developer("Clarence Pereira", "Clpe2")); // developer 2 created and added to the group
 
-    int choice;
+    int choice; //choice function for the user (interface)
     do {
         printf("\nWähle eine Aktion:\n");
         printf("1. Entwickler auflisten\n");
@@ -77,22 +77,22 @@ int main() {
         scanf("%d", &choice);
 
         switch (choice) {   
-            case 1:
+            case 1: //output the developers
                 for (int i = 0; i < group.num_developers; i++) {
                     print_developer(&group.developers[i]);
                 }
                 break;
             case 2:
-                print_group_logo(&group);
+                print_group_logo(&group); //output group logo
                 break;
             case 3:
-                print_group(&group);
+                print_group(&group); //output group members and logo
                 break;
             case 4:
-                printf("Beendet.\n");
+                printf("Beendet.\n"); //quit program
                 break;
             default:
-                printf("Ungültige Eingabe.\n");
+                printf("Ungültige Eingabe.\n"); // wrong input message
         }
     } while (choice != 4);
 
