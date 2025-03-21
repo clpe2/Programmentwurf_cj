@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 int main() {
-    char logo[LOGO_HEIGHT][LOGO_WIDTH + 1] = {
+    const char logo[LOGO_HEIGHT][LOGO_WIDTH + 1] = {
     "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
     "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%%%%%%%%%%#*       *%%%%%%%%%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
     "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%%%%%%%%                                       %%%%%%%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
@@ -74,7 +74,15 @@ int main() {
         printf("2. Gruppenlogo ausgeben\n");
         printf("3. Gruppe ausgeben\n");
         printf("4. Beenden\n");
-        scanf("%d", &choice);
+
+         // check if valid input
+         if (scanf("%d", &choice) != 1) {
+            printf("Gebe eine Zahl ein!\n");
+            
+            while (getchar() != '\n');
+            choice = 0; // setting choice to valid input
+            continue; // jump to start
+        }
 
         switch (choice) {   
             case 1: //output the developers
