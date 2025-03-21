@@ -1,0 +1,9 @@
+{
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "name": "CMake 3.2 Codespace",
+    "extensions": [
+        "ms-vscode.cmake-tools"
+    ]
+    
